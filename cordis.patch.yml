@@ -1,0 +1,9 @@
+# @tiyirt/dsh-prompt-order-fix bundle patch.
+# 一键安装：dsh plugin add 后自动禁用官方 system-prompt、插入确定性排序版本，
+# 无需手动改用户补丁层。移除本 bundle 即还原官方行为。
+- id: system-prompt
+  disabled: true
+
+- insert:
+    - id: system-prompt-deterministic
+      name: '@tiyirt/dsh-prompt-order-fix'
